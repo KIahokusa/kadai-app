@@ -39,7 +39,7 @@ class HomeController extends Controller
         if (count($posts) > 0) {
             $posts = $this->sort($posts);
         }
-        
+
         // 画面表示
         return view('home', compact('posts'));
     }

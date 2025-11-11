@@ -65,6 +65,8 @@ class PostController extends Controller
 
         $isOwnPost = false;
 
+
+
         // セッションにログイン情報があるか確認
         if (Session::exists('user')) {
             // ログイン中のユーザーの情報を取得する
