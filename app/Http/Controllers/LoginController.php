@@ -45,6 +45,8 @@ class LoginController extends Controller
      */
     public function logout()
     {
+        //セッションデータの削除
+        Session::forget('user');
 
         return redirect('/login');
     }
