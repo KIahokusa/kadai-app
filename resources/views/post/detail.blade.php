@@ -20,9 +20,11 @@
                     <img class="user-icon" src="{{ asset('/img/user_icon.png') }}" alt="" />
                     <div class="user-name">{{ $user->name }}</div>
                 </div>
+
                 <div class="content">{{ $post->content }}</div>
                 <div class="time-stamp">{{ $post->created_at }}</div>
             </a>
+            @if ($isOwnPost)
             <div class="menu">
                 <div class="menu-item font-blue">
                     <a href="/post/edit/{{ $post->id }}">編集</a>
@@ -34,6 +36,7 @@
                     </div>
                 </form>
             </div>
+            @endif
         </div>
     </div>
 </body>
