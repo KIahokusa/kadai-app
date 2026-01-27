@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller,
     Session;
 use App\Models\User;
 
+use function PHPUnit\Framework\assertDirectoryDoesNotExist;
+
 class UserController extends Controller
 {
     /**
@@ -115,6 +117,7 @@ class UserController extends Controller
      */
     public function create()
     {
+
         return view('user.signup');
     }
 
@@ -124,7 +127,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //TODO 登録処理
-
+        //dd('signup');
         return redirect('/');
     }
 }
